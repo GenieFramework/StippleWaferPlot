@@ -1,0 +1,7 @@
+
+.waferPlotContainer{
+    
+}
+.waferPlotContainer canvas{
+    width: 100% !important;
+}

@@ -1,0 +1,40 @@
+{
+  "label": "WaferPlot",
+  "gbPluginId": "stipplewaferplot", 
+  "tagName": "ST-WAFERPLOT",
+  "type": "st-waferplot",
+  "icon": "{appPath}/components/waferplot/assets/library_icon.png",
+  "category": "Custom Components",
+  "content": "<st-waferplot gb_c__dataset=\"[ [0,0,0,0], [0,1,0,0], [0,1,1,0], [0,0,1,0] ]\"></waferplot>",
+  "description": "",
+  "isComposite": true,
+  "enabled": true,
+  "hideFromLibrary": false,
+  "draggable": true,
+  "editable": false,
+  "droppable": false,
+  "properties": [
+    {
+        "label": "Dataset",
+        "name": "dataset",
+        "enabled": true,
+        "type": ["Array"]
+    }, 
+    {
+        "label": "Selected Cell",
+        "name": "v-model",
+        "enabled": true,
+        "type": ["Array"]
+    }, 
+    {
+        "label": "Mode",
+        "name": "mode",
+        "enabled": true,
+        "type": ["String"], 
+        "uitype": "select",
+        "options": [
+            "Heatmap", "Quiver"
+        ]
+    }
+  ]    
+}

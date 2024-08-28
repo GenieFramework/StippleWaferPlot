@@ -1,0 +1,9 @@
+st-waferplot {
+  display: block;
+  background: white;
+
+}
+
+st-waferplot canvas{
+  width:900px;
+}

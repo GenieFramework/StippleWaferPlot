@@ -5,7 +5,7 @@
   "type": "st-waferplot",
   "icon": "{appPath}/components/waferplot/assets/library_icon.png",
   "category": "Custom Components",
-  "content": "<st-waferplot gb_c__dataset=\"[ [0,0,0,0], [0,1,0,0], [0,1,1,0], [0,0,1,0] ]\"></waferplot>",
+  "content": "<st-waferplot gb_c__magnitude=\"[ [0,0,0,0], [0,1,0,0], [0,1,1,0], [0,0,1,0] ]\"></waferplot>",
   "description": "",
   "isComposite": true,
   "enabled": true,
@@ -15,8 +15,14 @@
   "droppable": false,
   "properties": [
     {
-        "label": "Dataset",
-        "name": "dataset",
+        "label": "Magnitude",
+        "name": "magnitude",
+        "enabled": true,
+        "type": ["Array"]
+    }, 
+    {
+        "label": "Angle",
+        "name": "angle",
         "enabled": true,
         "type": ["Array"]
     }, 

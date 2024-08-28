@@ -15,7 +15,7 @@ if (window.Vue) {
         },
 
         props: {
-            dataset: { type: Array, required: true },
+            magnitude: { type: Array, required: true },
             angle: { type: Array, required: false },
             selectedCell: { type: Array, required: false },
         },
@@ -37,7 +37,7 @@ if (window.Vue) {
 
         methods: {
             renderPlot() {
-                console.log('renderPlot', this.dataset);
+                console.log('renderPlot', this.magnitude);
                 this.cellList.forEach(cell => {
                     this.mainGroup.remove(cell);
                 });
@@ -49,7 +49,7 @@ if (window.Vue) {
 
                 let margin = 0.1;
                 let cubeSize = this.cubeSize;
-                let dataSource = this.dataset;
+                let dataSource = this.magnitude;
                 let totalWidth = (dataSource[0].length - 1) * (cubeSize + margin);
                 let totalHeight = (dataSource.length - 1) * (cubeSize + margin);
                 let rows = dataSource;
@@ -262,7 +262,7 @@ if (window.Vue) {
         },
 
         watch: {
-            dataset() {
+            magnitude() {
                 this.renderPlot();
             },
             angle() {

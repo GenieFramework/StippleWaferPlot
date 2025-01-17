@@ -105,8 +105,13 @@ if (window.Vue) {
                             const materialArrow = new THREE.MeshBasicMaterial({ color: color });
                             const arrow = new THREE.Mesh(geometryArrow, materialArrow);
 
-                            arrow.rotation.z = this.angle[i][j];
-
+                            try {
+                                const angle = this.angle[i][j];
+                                arrow.rotation.z = angle;
+                            }
+                            catch (e) { 
+                                console.log('Error:', e);
+                            }
                             arrow.position.set(0, 0, .1);
                             cell.add(arrow);
                         } else {
